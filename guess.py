@@ -61,6 +61,7 @@ class guess:
                     currentGuess = list("----")
                 else:
                     badguess = badguess + 1
+                    score = score - (score) * 0.10
                     print("your guess is not correct")
 
 

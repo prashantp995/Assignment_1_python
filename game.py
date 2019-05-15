@@ -39,7 +39,7 @@ class game:
 
     def getScore(self, input):
         print("getting score for ", input)
-        return wordFrequency.get(input.lower())
+        return 100 - wordFrequency.get(input.lower())
 
     def printGameList(self):
         print("Game     word        status      Bad guess      missedletters                score")
