@@ -48,7 +48,7 @@ class game:
         for game in self.gameList:
             print(counter, end="")
             print("\t\t", game.word, end=" ")
-            print("\t\t\t", game.status, end=" ")
+            print("\t\t", game.status, end=" ")
             print("\t\t\t\t", game.badguess, end=" ")
             print("\t\t\t\t\t", game.missedletters, end=" ")
             print("\t\t\t\t\t", game.score, end=" ")
