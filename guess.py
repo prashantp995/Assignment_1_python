@@ -5,27 +5,30 @@ import re
 
 class guess:
     def game(self):
-        gamequite = False
-        wordToGuess = list(stringDatabase.database.getWord(stringDatabase.database))
+        gamequit = False
+        wordToGuess = stringDatabase.database.getWord(stringDatabase.database)
         currentGuess = list("----")
         print(wordToGuess)
-        while gamequite != True:
+        while gamequit != True:
 
             print("Current guess is")
             print(''.join(currentGuess))
-            print("g= guess, t = tellme, l for a letter, and q to quit")
+            print("g = guess, t = tellme, l for a letter, and q to quit")
             choice = str(input())
             if choice == "q":
                 print("Quiting the game")
-                gamequite = True
+                gamequit = True
+            if choice == "t":
+                print("word is " + wordToGuess)
+                wordToGuess = stringDatabase.database.getWord(stringDatabase.database)
+                currentGuess = list("----")
             if choice == "l":
                 letter = input()[0]
                 if letter in wordToGuess:
                     print("your one character is correct")
-                    indexToChange = wordToGuess.index(letter)
-                    currentGuess[indexToChange] = letter
-                    for m in re.finditer(letter, wordToGuess):
-                        print('ll found', m.start(), m.end())
+                    # ref :https://stackoverflow.com/questions/3873361/finding-multiple-occurrences-of-a-string-within-a-string-in-python
+                    for index in re.finditer(letter, str(wordToGuess)):
+                        currentGuess[index.start()] = letter
 
 
 guess.game(guess)
