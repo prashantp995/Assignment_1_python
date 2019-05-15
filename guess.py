@@ -7,7 +7,7 @@ import re
 class guess:
     def game(self):
         gamequit = False
-        wordToGuess = "nave"  # stringDatabase.database.getWord(stringDatabase.database)
+        wordToGuess = stringDatabase.database.getWord(stringDatabase.database)
         currentGuess = list("----")
         score = 0
         badguess = 0
@@ -36,13 +36,16 @@ class guess:
                 gamequit = True
             if choice == "t":
                 print("word is " + wordToGuess)
+                game.game.gameList.append(game.game(wordToGuess, "Gave Up", badguess, missedletter, score))
                 wordToGuess = stringDatabase.database.getWord(stringDatabase.database)
                 currentGuess = list("----")
                 badguess = 0
                 missedletter = 0
             if choice == "l":
                 print("please enter the letter")
-                letter = input()[0]
+                tempInput = input()
+                if (tempInput != ""):
+                    letter = tempInput[0]
                 characterscore = game.game.getScore(game.game, letter)
                 if letter in wordToGuess and letter not in currentGuess:
                     # ref :https://stackoverflow.com/questions/3873361/finding-multiple-occurrences-of-a-string-within-a-string-in-python
