@@ -1,7 +1,7 @@
+import re
+
 import game
 import stringDatabase
-import random
-import re
 
 
 class guess:
@@ -31,7 +31,7 @@ class guess:
             choice = str(input())
             if choice == "q":
                 print("Quiting the game")
-                game.game.gameList.append(game.game(wordToGuess, "Gave Up", badguess, missedletter, score))
+               # game.game.gameList.append(game.game(wordToGuess, "Gave Up", badguess, missedletter, score))
                 game.game.printGameList(game.game);
                 gamequit = True
             if choice == "t":
@@ -60,6 +60,10 @@ class guess:
                 guessedstring = input()
                 if guessedstring == wordToGuess:
                     print("your guess is correct")
+                    tempscore = 0;
+                    for character in wordToGuess:
+                        tempscore = tempscore + game.game.getScore(game.game, character)
+                    game.game.gameList.append(game.game(wordToGuess, "Success", badguess, missedletter, tempscore))
                     wordToGuess = stringDatabase.database.getWord(stringDatabase.database)
                     currentGuess = list("----")
                 else:
