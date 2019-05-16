@@ -66,6 +66,10 @@ class guess:
                     game.game.gameList.append(game.game(wordToGuess, "Success", badguess, missedletter, tempscore))
                     wordToGuess = stringDatabase.database.getWord(stringDatabase.database)
                     currentGuess = list("----")
+                    badguess = 0
+                    missedletter = 0
+                    score = 0
+                    status = ""
                 else:
                     badguess = badguess + 1
                     score = score - (score) * 0.10
