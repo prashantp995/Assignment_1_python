@@ -42,15 +42,15 @@ class game:
         return 100 - wordFrequency.get(input.lower())
 
     def printGameList(self):
-        print("Game     word        status      Bad guess      missedletters                score")
+        print("Game\t\tword\t\tstatus\t\tBad guess\t\tmissedletters\t\tscore")
         # ref :https://stackoverflow.com/questions/3249524/print-in-one-line-dynamically
         counter = 0
         for game in self.gameList:
             print(counter, end="")
-            print("\t\t", game.word, end=" ")
-            print("\t\t", game.status, end=" ")
-            print("\t\t\t\t", game.badguess, end=" ")
-            print("\t\t\t\t\t", game.missedletters, end=" ")
-            print("\t\t\t\t\t", game.score, end=" ")
+            print("\t\t", game.word, end="")
+            print("\t\t", game.status, end="")
+            print("\t\t", game.badguess, end="")
+            print("\t\t", game.missedletters, end="")
+            print("\t\t", game.score, end="")
             counter = counter + 1
             print("\n")
