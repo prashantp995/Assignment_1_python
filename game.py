@@ -53,17 +53,12 @@ class game:
     def printGameList(self):
         # print("Game\t\tword\t\tstatus\tBad guess\tmissedletters\t\t\tscore")
 
-
         # ref :https://stackoverflow.com/questions/3249524/print-in-one-line-dynamically
         counter = 0
         for game in self.gameList:
-            if(counter == 0):
-                print(Column[0].ljust(20), end="");
-                print(Column[1].ljust(20), end="");
-                print(Column[2].ljust(20), end="");
-                print(Column[3].ljust(20), end="");
-                print(Column[4].ljust(20), end="");
-                print(Column[5].ljust(20), end="");
+            if (counter == 0):
+                for col in Column:
+                    print(col.ljust(20), end="");
                 print("\n")
             print(f'{str(counter).ljust(20)}', end="")
             print(f'{game.word.ljust(20)}', end="")
