@@ -31,7 +31,6 @@ class guess:
             choice = str(input())
             if choice == "q":
                 print("Quiting the game")
-               # game.game.gameList.append(game.game(wordToGuess, "Gave Up", badguess, missedletter, score))
                 game.game.printGameList(game.game);
                 gamequit = True
             if choice == "t":
@@ -53,7 +52,7 @@ class guess:
                         score = score + characterscore
                         currentGuess[index.start()] = letter
                 else:
-                    score = score - characterscore;
+                    score = score - (characterscore) * 0.50;
                     missedletter = missedletter + 1
             if choice == "g":
                 print("please enter your guessed string")

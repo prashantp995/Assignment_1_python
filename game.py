@@ -1,30 +1,39 @@
-wordFrequency = {'a': 8.17,
-                 'b': 1.49,
-                 'c': 2.78,
-                 'd': 4.25,
-                 'e': 12.70,
-                 'f': 2.23,
-                 'g': 2.02,
-                 'h': 6.09,
-                 'i': 6.97,
-                 'j': 0.15,
-                 'k': 0.77,
-                 'l': 4.03,
-                 'm': 2.41,
-                 'n': 6.75,
-                 'o': 7.51,
-                 'p': 1.93,
-                 'q': 0.10,
-                 'r': 5.99,
-                 's': 6.33,
-                 't': 9.06,
-                 'u': 2.76,
-                 'v': 0.98,
-                 'w': 2.36,
-                 'x': 0.15,
-                 'y': 1.97,
-                 'z': 0.07
-                 }
+wordFrequency = {
+    'a': 3,
+    'b': 20,
+    'c': 12,
+    'd': 10,
+    'e': 1,
+    'f': 16,
+    'g': 17,
+    'h': 8,
+    'i': 5,
+    'j': 23,
+    'k': 22,
+    'l': 11,
+    'm': 14,
+    'n': 6,
+    'o': 4,
+    'p': 19,
+    'q': 25,
+    'r': 9,
+    's': 7,
+    't': 2,
+    'u': 13,
+    'v': 21,
+    'w': 15,
+    'x': 24,
+    'y': 18,
+    'z': 26
+}
+Column = [
+    "Game",
+    "Word",
+    "Status",
+    "Bad Guess",
+    "Missed Letters",
+    "Scores"
+]
 
 
 class game:
@@ -39,18 +48,28 @@ class game:
 
     def getScore(self, input):
         print("getting score for ", input)
-        return 100 - wordFrequency.get(input.lower())
+        return wordFrequency.get(input.lower())
 
     def printGameList(self):
-        print("Game\t\tword\t\tstatus\t\tBad guess\t\tmissedletters\t\tscore")
+        # print("Game\t\tword\t\tstatus\tBad guess\tmissedletters\t\t\tscore")
+
+
         # ref :https://stackoverflow.com/questions/3249524/print-in-one-line-dynamically
         counter = 0
         for game in self.gameList:
-            print(counter, end="")
-            print("\t\t", game.word, end="")
-            print("\t\t", game.status, end="")
-            print("\t\t", game.badguess, end="")
-            print("\t\t", game.missedletters, end="")
-            print("\t\t", game.score, end="")
+            if(counter == 0):
+                print(Column[0].ljust(20), end="");
+                print(Column[1].ljust(20), end="");
+                print(Column[2].ljust(20), end="");
+                print(Column[3].ljust(20), end="");
+                print(Column[4].ljust(20), end="");
+                print(Column[5].ljust(20), end="");
+                print("\n")
+            print(f'{str(counter).ljust(20)}', end="")
+            print(f'{game.word.ljust(20)}', end="")
+            print(f'{game.status.ljust(20)}', end="")
+            print(f'{str(game.badguess).ljust(20)}', end="")
+            print(f'{str(game.missedletters).ljust(20)}', end="")
+            print(f'{str(game.score).ljust(20)}', end="")
             counter = counter + 1
             print("\n")
