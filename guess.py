@@ -24,6 +24,7 @@ class guess:
         score = 0
         badGuess = 0
         missedLetter = 0
+        gameCounter = 0
         status = ""
         while gamequit != True:
             if ('-' not in currentGuess):
@@ -39,7 +40,16 @@ class guess:
             print("Current guess is")
             print(''.join(currentGuess))
             print("g = guess, t = tellme, l for a letter, and q to quit")
+            if (gameCounter > 100):
+                print("you have played 100 rounds")
+                game.game.printGameList(game.game)
+                gamequit = True
+                currentGuess = list("----")
+                badGuess = 0
+                missedLetter = 0
+                score = 0
             choice = str(input())
+            gameCounter = gameCounter + 1
             if choice == "q":
                 print("Quiting the game")
                 game.game.printGameList(game.game)

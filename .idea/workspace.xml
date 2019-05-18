@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6516f321-cc15-4aa0-810d-8213eb6dcbc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guess.py" beforeDir="false" afterPath="$PROJECT_DIR$/guess.py" afterDir="false" />
-    </list>
+    <list default="true" id="6516f321-cc15-4aa0-810d-8213eb6dcbc0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,14 +40,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="29" />
-          <entry key="py" value="6008" />
+          <entry key="dummy" value="39" />
+          <entry key="py" value="6026" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="29" />
-          <entry key="Python" value="6008" />
+          <entry key="PLAIN_TEXT" value="39" />
+          <entry key="Python" value="6026" />
         </counts>
       </usages-collector>
     </session>
@@ -97,11 +93,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="73" lean-forward="true" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+            <state relative-caret-position="261">
+              <caret line="58" column="49" lean-forward="true" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
               <folding>
-                <marker date="1558133057975" expanded="true" signature="1344:1346" ph="..." />
-                <marker date="1558133057975" expanded="true" signature="1344:1350" ph="..." />
+                <marker date="1558208046973" expanded="true" signature="1378:1380" ph="..." />
+                <marker date="1558208046973" expanded="true" signature="1378:1384" ph="..." />
               </folding>
             </state>
           </provider>
@@ -132,9 +128,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/solution.py" />
-        <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/stringDatabase.py" />
         <option value="$PROJECT_DIR$/guess.py" />
+        <option value="$PROJECT_DIR$/game.py" />
       </list>
     </option>
   </component>
@@ -311,7 +307,7 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.077852346" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.077852346" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32960895" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -321,7 +317,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32960895" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32681563" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32681563" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32960895" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -418,11 +414,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="73" lean-forward="true" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+        <state relative-caret-position="261">
+          <caret line="58" column="49" lean-forward="true" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
           <folding>
-            <marker date="1558133057975" expanded="true" signature="1344:1346" ph="..." />
-            <marker date="1558133057975" expanded="true" signature="1344:1350" ph="..." />
+            <marker date="1558208046973" expanded="true" signature="1378:1380" ph="..." />
+            <marker date="1558208046973" expanded="true" signature="1378:1384" ph="..." />
           </folding>
         </state>
       </provider>
