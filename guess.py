@@ -13,6 +13,7 @@ class guess:
           Init the game.
           For bad guess , 10% penalty will be applied on current total score
           For missed character , 50 % of missed character's score penalty will be applied
+          For give up , every '-' in current guess , penalty will be applied
     """
 
     def game(self):

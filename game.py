@@ -2,7 +2,7 @@
       word frequency table , points are assigned based on frequency table provided in the assignment description
       word with highest frequency gets lower point , for example letter 'e'
 """
-wordFrequency = {
+scoreTable = {
     'a': 3, 'b': 20, 'c': 12, 'd': 10, 'e': 1, 'f': 16, 'g': 17, 'h': 8, 'i': 5,
     'j': 23, 'k': 22, 'l': 11, 'm': 14, 'n': 6, 'o': 4, 'p': 19, 'q': 25,
     'r': 9, 's': 7, 't': 2, 'u': 13, 'v': 21, 'w': 15, 'x': 24, 'y': 18, 'z': 26
@@ -24,6 +24,7 @@ class game:
     def __init__(self, word=None, status=None, badguess=None, missedletters=None, score=None):
         """
         Constructor
+        :rtype: object of game class
         :param badguess: number of bad guess during game for given word
         :param missedletters: number of missed letters
         :param score: score for the game (for particular word)
@@ -43,7 +44,7 @@ class game:
         :param character: input character for which score is needed
         :rtype: object
         """
-        return wordFrequency.get(character.lower())
+        return scoreTable.get(character.lower())
 
     def printGameList(self):
         """
