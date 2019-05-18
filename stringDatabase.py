@@ -12,7 +12,7 @@ for word in words:
         wordList.append(word)
 
 """
-This class is for string database . Class contains method to select random word 
+This class is for  database of words . Class contains method to select random word 
 
 """
 
