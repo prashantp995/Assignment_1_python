@@ -37,6 +37,8 @@ class guess:
                 missedLetter = 0
                 score = 0
                 status = ""
+                print(
+                    "----------------------------------Now guess the next word in the game-----------------------------------")
             print("Current guess is")
             print(''.join(currentGuess))
             print("g = guess, t = tellme, l for a letter, and q to quit")
