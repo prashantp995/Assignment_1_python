@@ -70,6 +70,8 @@ class guess:
                 badGuess = 0
                 missedLetter = 0
                 score = 0
+                print(
+                    "----------------------------------Now guess the next word in the game-----------------------------------")
             if choice == "l":
                 print("please enter the letter")
                 tempInput = input()
@@ -99,6 +101,8 @@ class guess:
                     missedLetter = 0
                     score = 0
                     status = ""
+                    print(
+                        "----------------------------------Now guess the next word in the game-----------------------------------")
                 else:
                     badGuess = badGuess + 1
                     score = score - (score) * 0.10
