@@ -39,7 +39,6 @@ class guess:
                 status = ""
                 trialWord = 0
             print("Current guess is")
-            print(wordToGuess)
             print(''.join(currentGuess))
             print("g = guess, t = tellme, l for a letter, and q to quit")
             if (gameCounter > 100):
