@@ -29,7 +29,10 @@ class guess:
         while gamequit != True:
             if ('-' not in currentGuess):
                 status = "success"
+                print(
+                    "----------------------------------Now guess the next word in the game-----------------------------------")
                 # add game details to game list
+
                 game.game.gameList.append(game.game(wordToGuess, status, badGuess, missedLetter, score))
                 wordToGuess = stringDatabase.database.getWord(stringDatabase.database)
                 currentGuess = list("----")
