@@ -13,7 +13,6 @@ for word in words:
 
 """
 This class is for  database of words . Class contains method to select random word 
-
 """
 
 

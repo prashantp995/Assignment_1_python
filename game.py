@@ -1,11 +1,12 @@
 """
-      word frequency table , points are assigned based on frequency table provided in the assignment description
-      word with highest frequency gets lower point , for example letter 'e'
+      word frequency table
 """
 scoreTable = {
-    'a': 3, 'b': 20, 'c': 12, 'd': 10, 'e': 1, 'f': 16, 'g': 17, 'h': 8, 'i': 5,
-    'j': 23, 'k': 22, 'l': 11, 'm': 14, 'n': 6, 'o': 4, 'p': 19, 'q': 25,
-    'r': 9, 's': 7, 't': 2, 'u': 13, 'v': 21, 'w': 15, 'x': 24, 'y': 18, 'z': 26
+    'a': 8.17, 'b': 1.49, 'c': 2.78,
+    'd': 4.25, 'e': 12.07, 'f': 2.23, 'g': 2.02, 'h': 6.09,
+    'i': 6.97, 'j': 0.15, 'k': 0.77, 'l': 4.03, 'm': 2.41, 'n': 6.75, 'o': 7.51,
+    'p': 1.93, 'q': 0.10, 'r': 5.99, 's': 6.33, 't': 9.06, 'u': 2.76, 'v': 0.98, 'w': 2.36, 'x': 0.15, 'y': 1.97,
+    'z': 0.07
 }
 # Columns for the printing final result
 Column = [
@@ -30,7 +31,6 @@ class game:
         :param score: score for the game (for particular word)
         :param word :word in current game
         :param status : status of the game
-
         """
         self.word = word
         self.status = status
@@ -53,16 +53,20 @@ class game:
         # ref :https://stackoverflow.com/questions/3249524/print-in-one-line-dynamically
         # ref :https://www.tutorialspoint.com/python/string_ljust.htm
         counter = 0
+        totalscore = 0.0
         for game in self.gameList:
             if (counter == 0):
                 for col in Column:
                     print(col.ljust(20), end="");
                 print("\n")
+            printscore = f'{game.score:.3f}' # need to get precision up to 3 points
             print(f'{str(counter).ljust(20)}', end="")
             print(f'{game.word.ljust(20)}', end="")
             print(f'{game.status.ljust(20)}', end="")
             print(f'{str(game.badguess).ljust(20)}', end="")
             print(f'{str(game.missedletters).ljust(20)}', end="")
-            print(f'{str(game.score).ljust(20)}', end="")
+            print(f'{str(printscore).ljust(20)}', end="")
             counter = counter + 1
+            totalscore = totalscore + game.score
             print("\n")
+        print(f'final score :{totalscore:.3f}')
