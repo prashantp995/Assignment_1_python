@@ -95,7 +95,7 @@ class guess:
             if choice == "g":
                 print("please enter your guessed string")
                 guessedString = input()
-                if guessedString == wordToGuess:
+                if guessedString.lower() == wordToGuess.lower():
                     print("your guess is correct")
                     tempscore = 0
                     for index in re.finditer('-', ''.join(currentGuess)):
